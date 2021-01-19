@@ -9,6 +9,9 @@ services:
         BACKEND_SOURCE_FOLDER: ${BACKEND_SOURCE_FOLDER}
         NEO4J_USER: ${NEO4J_USER}
         NEO4J_PASS: ${NEO4J_PASS}
+    environment:
+      - NEO4J_GRAPHQL_ENDPOINT=http://neo4j:7474/graphql/
+      - GRAPHQL_SCHEMA=graphql/bento-extended.graphql
     depends_on:
       - neo4j
       - bento-frontend
@@ -25,6 +28,11 @@ services:
       dockerfile: ./dockerfiles/${BUILD_MODE}/frontend
       args:
         FRONTEND_SOURCE_FOLDER: ${FRONTEND_SOURCE_FOLDER}
+    environment:
+      - REACT_APP_BACKEND_API=http://localhost:8080/v1/graphql/
+      - REACT_APP_ABOUT_CONTENT_URL=https://raw.githubusercontent.com/CBIIT/bento-frontend/master/src/content/dev/aboutPagesContent.yaml
+      - REACT_APP_BE_VERSION=${BACKEND_BRANCH}
+      - REACT_APP_FE_VERSION=${FRONTEND_BRANCH}
     volumes:
       - ./${FRONTEND_SOURCE_FOLDER}:/usr/local/bento-frontend
       - /usr/local/bento-frontend/node_modules

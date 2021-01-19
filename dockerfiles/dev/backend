@@ -57,8 +57,6 @@ COPY ${BACKEND_SOURCE_FOLDER} /usr/local/bento-backend
 RUN cd /usr/local/bento-backend \
  && if [ -f src/main/resources/application.properties ]; then mv src/main/resources/application.properties src/main/resources/application.properties.bak; fi \
  && mv src/main/resources/application_example.properties src/main/resources/application.properties \
- && sed -i "s|neo4j.graphql.endpoint =http://localhost:7474/graphql/|neo4j.graphql.endpoint=http://neo4j:7474/graphql/|" src/main/resources/application.properties \
- && sed -i "s|graphql.schema=graphql/schema.graphql|graphql.schema=graphql/bento-extended.graphql|" src/main/resources/application.properties \
  && sed -i "s|neo4j.authorization =Basic 123456|neo4j.authorization =$(echo "Basic $(echo -n "${NEO4J_USER}:${NEO4J_PASS}" | base64)")|" src/main/resources/application.properties \
  && mvn package -DskipTests
 
