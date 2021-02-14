@@ -1,0 +1,3 @@
+type	to_file_id	to_file_description	to_file_format	to_file_location	to_file_name	to_files_size	to_file_type	to_md5sum
+task_order_files	CBIIT-CRDC-TO-001	Task Order RFP	pdf	//s3/path-to-file	crdc-TO-rfp.pdf	20k	TO RFP	e8372jje93
+task_order_files	CBIIT-CRDC-TO-002	Task Order RFP Responds	pdf	//s3/path-to-file	crdc-TO-rfp-resp.pdf	80k	TO RFP RESP	3882kkd93

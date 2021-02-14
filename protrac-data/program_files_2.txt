@@ -1,0 +1,2 @@
+type	program.program_id	program_file_id	program_file_description	program_file_format	program_file_location	program_file_name	program_file_size	program_file_type	program_file_md5sum
+program_files	CRDC-YT2018	CBIIT-CRDC-Pro-0001	This is a copy of the RFP for the program	pdf	//s3/path-to-file	cbiit-crdc-rfp.pdf	16k	RFP	l3i2l-99llkki99 program_files	CBIIT-CRDC-Pro-0002	This is a copy of the RFP Response for the program	pdf	//s3/path-to-file	cbiit-crdc-rsp.pdf	18k	RFP Resp	l3i2l-99llkk938

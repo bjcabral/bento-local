@@ -1,0 +1,2 @@
+type	year_working_hours	merit_increase_percentage	fringe_percentage	month_hours_jan	month_hours_feb	month_hours_mar	month_hours_apr	month_hours_may	month_hours_jun	month_hours_jul	month_hours_aug	month_hours_sep	month_hours_oct	month_hours_nov	month_hours_dec
+resource_rate_config	1780	4.70	5.00	150	154	145	145	150	140	200	146	140	140	140	130

@@ -1,0 +1,420 @@
+Nodes:
+  institution:
+    Props:
+      - institution_id
+      - institution_name
+      - institution_url
+      - institution_acronymn
+  program:
+    Props:
+      - program_id
+      - program_name
+      - program_acronym
+      - program_full_description
+      - program_external_url
+      - program_short_description
+      - start_date
+      - end_date
+      - sponsor
+      - program_sort_order
+      - state
+      - program_manager
+      - unit_of_work
+      - research_area 
+  program_files:
+    Props:
+      - program_file_id
+      - program_file_description
+      - program_file_format
+      - program_file_location
+      - program_file_name
+      - program_file_size
+      - program_file_type
+      - program_file_md5sum
+  task_order:
+    Props:
+      - task_order_id
+      - task_order_name
+      - task_order_acronym
+      - task_order_full_description
+      - task_order_short_description
+      - task_order_type
+      - to_date_of_approval
+      - to_start_date
+      - to_end_date
+      - to_state
+      - to_manager
+      - to_acquisition_type
+      - to_research_area
+      - to_unit_of_work
+  task_order_files: 
+    Props:
+      - to_file_id
+      - to_file_description
+      - to_file_format
+      - to_file_location
+      - to_file_name
+      - to_files_size
+      - to_file_type
+      - to_md5sum
+  project:
+    Props:
+      - project_name
+      - project_acronym
+      - project_full_description
+      - project_external_url
+      - project_short_description
+      - project_type
+      - project_date_of_approval
+      - project_start_date
+      - project_end_date
+      - project_status
+      - project_sort_order
+      - project_acquisition_type
+      - project_gov_sponsor
+      - project_gov_project_manager
+  project_finance:
+    Props:
+      - program
+      - research_area
+      - unit_of_work
+      - proposed_budget
+      - revised_budget_post_proposal
+      - project_approved_budget
+      - project_budget_amount_pending_fcas
+      - project_odc_budget
+      - project_subcontract_budget
+      - project_labor_and_fringe_budget
+      - project_funding_source
+      - project_funded_amount
+      - project_funding_level
+      - project_funds_expiration_date
+      - project_cost_to_date_labor
+      - project_cost_to_date_odcs
+      - project_cost_to_date_subcontract
+      - project_estimate_to_completion_labor
+      - project_estimate_to_completion_odc
+      - project_estimate_to_completion_subcontract
+      - project_estimate_at_completion_labor
+      - project_estimate_at_completion_odc
+      - project_estimate_at_completion_subcontract
+      - project_budget_comments
+      - total_project_budget
+      - project_budget_variance_labor
+      - project_budget_variance_odc
+      - project_budget_variance_subcontract
+      - total_project_budget_varience
+      - total_project_etc
+      - total_project_eac
+  project_subcontract:
+    Props:
+      - project_subcontract_number
+      - project_subcontract_vendor
+      - project_subcontract_budget
+      - project_subcontract_pop_start
+      - project_subcontract_pop_end
+      - project_subcotract_funding_source
+      - project_subcontract_co
+      - project_subcontract_pm
+      - project_subcontract_supported_project_id
+      - project_subcontract_supported_project_name
+      - project_subcontract_vendor_poc
+      - project_subcontract_cost_to_date
+      - project_subcontract_balance
+      - project_subcontract_budget_percentage_available
+  project_health_information:
+    Props:
+      - project_risk_status 
+      - project_last_month_activities 
+      - project_current_month_activities
+      - project_next_month_activities 
+      - project_risk_description
+      - project_risk_level
+      - project_risks_mitigation
+      - project_risk_comments
+  project_resource_allocation:
+    Props:
+      - percent_allocation_jan 
+      - percent_allocation_feb 
+      - percent_allocation_mar 
+      - percent_allocation_apr 
+      - percent_allocation_may 
+      - percent_allocatin_jun 
+      - percent_allocation_jul 
+      - percent_allocation_aug 
+      - percent_allocation_sep 
+      - percent_allocation_nov 
+      - percent_allocation_dec 
+  project_ids:
+    Props:
+      - project_id
+      - project_name 
+      - portfolio_name 
+      - research_area 
+      - unit_of_work 
+  project_file:
+    Props:
+      - project_file_id
+      - project_file_description
+      - project_file_format
+      - project_file_location
+      - project_file_name
+      - project_file_size
+      - project_file_type
+      - project_file_md5sum
+  resource_rate_config:
+    Props:
+      - year_working_hours
+      - merit_increase_percentage
+      - fringe_percentage
+      - month_hours_jan
+      - month_hours_feb
+      - month_hours_mar
+      - month_hours_apr
+      - month_hours_may
+      - month_hours_jun
+      - month_hours_jul
+      - month_hours_aug
+      - month_hours_sep
+      - month_hours_oct
+      - month_hours_nov
+      - month_hours_dec
+  program_resources:
+    Props:
+      - employee_id 
+      - employee_name 
+      - employee_labor_category 
+      - base_hourly_rate 
+      - planned_promotion_percentage
+      - planned_promotion_amount
+      - merit_increase_amount
+      - hourly_rate_with_fringe
+      - month_est_cost_jan
+      - month_est_cost_feb
+      - month_est_cost_mar
+      - month_est_cost_apr
+      - month_est_cost_may
+      - month_est_cost_jun
+      - month_est_cost_jul
+      - month_est_cost_aug
+      - month_est_cost_sep
+      - month_est_cost_oct
+      - month_est_cost_nov
+      - month_est_cost_dec
+      - position_status
+  project_managers:
+    Props:
+      - project_manager_name 
+      - project_manager_level 
+      - project_manager_email 
+      - project_manager_phone_number 
+      - project_manager_location 
+Relationships:
+  program_of_institution:
+    Mul: many_to_many
+    Ends:
+      - Src: institution 
+        Dst: program 
+    Props: null
+  institution_of_program:
+    Mul: many_to_many
+    Ends:
+      - Src: program 
+        Dst: institution 
+    Props: null
+  program_has_files:
+    Mul: many_to_many
+    Ends:
+      - Src: program 
+        Dst: program_files 
+    Props: null
+  file_of_program:
+    Mul: many_to_many
+    Ends:
+      - Src: program_files 
+        Dst: program 
+    Props: null
+  program_has_to:
+    Mul: many_to_many
+    Ends:
+      - Src: program 
+        Dst: task_order 
+    Props: null
+  program_has_manager:
+    Mul: many_to_many
+    Ends:
+      - Src: program 
+        Dst: project_managers
+  project_manager_associated_with_program:
+    Mul: many_to_many
+    Ends:
+      - Src: project_managers 
+        Dst: program 
+  project_allocation_has_resources:
+    Mul: many_to_many
+    Ends:
+      - Src: program_resources
+        Dst: project_resource_allocation
+  project_resource_allocation_associated_with_program_resources:
+    Mul: many_to_many
+    Ends:
+      - Src: project_resource_allocation 
+        Dst: program_resources 
+  project_allocation_has_project_ids:
+    Mul: many_to_many
+    Ends:
+      - Src: project_resource_allocation
+        Dst: project_ids 
+  project_ids_associated_with_task_order:
+    Mul: many_to_many
+    Ends:
+      - Src: project_ids 
+        Dst: task_order 
+  task_order_has_project_ids:
+    Mul: many_to_many
+    Ends:
+      - Src: task_order 
+        Dst: project_ids 
+
+  task_order_of_program:
+    Mul: many_to_many
+    Ends:
+      - Src: task_order 
+        Dst: program 
+
+  task_order_has_projects:
+    Mul: many_to_many
+    Ends:
+      - Src: task_order 
+        Dst: project 
+    Props: null
+  project_of_task_order:
+    Mul: many_to_many
+    Ends:
+      - Src: task_order 
+        Dst: project 
+    Props: null
+  task_order_has_files:
+    Mul: many_to_many
+    Ends:
+      - Src: task_order_files  
+        Dst: task_order 
+    Props: null
+  file_of_task_order:
+    Mul: many_to_many
+    Ends:
+      - Src: task_order  
+        Dst: task_order_files 
+    Props: null
+  project_has_project_id:
+    Mul: many_to_many 
+    Ends:
+      - Src: project_ids 
+        Dst: project 
+    Props: null
+  project_id_has_project:
+    Mul: many_to_many 
+    Ends:
+      - Src: project 
+        Dst: project_ids 
+    Props: null
+  project_has_project_project_manager:
+    Mul: many_to_many 
+    Ends:
+      - Src: project 
+        Dst: project_managers 
+    Props: null
+  project_has_task_order:
+    Mul: many_to_many 
+    Ends:
+      - Src: project 
+        Dst: task_order 
+    Props: null
+  project_has_finances:
+    Mul: one_to_one
+    Ends:
+      - Src: project 
+        Dst: project_finance 
+    Props: null
+  finances_has_project:
+    Mul: many_to_many 
+    Ends:
+      - Src: project_finance 
+        Dst: project 
+    Props: null
+  finance_has_project_ids:
+    Mul: many_to_many
+    Ends:
+      - Src: project_ids
+        Dst: project_finance
+  project_ids_has_finance:
+    Mul: many_to_many
+    Ends:
+      - Src: project_finance 
+        Dst: project_ids
+  project_has_health_info:
+    Mul: one_to_one
+    Ends:
+      - Src: project 
+        Dst: project_health_information 
+    Props: null
+  health_info_associated_with_project:
+    Mul: one_to_one
+    Ends:
+      - Src: project_health_information 
+        Dst: project 
+    Props: null
+  health_info_uses_project_ids:
+    Mul: many_to_many 
+    Ends:
+      - Src: project_ids
+        Dst: project_health_information
+    Props: null
+  project_ids_associated_with_project_health:
+    Mul: many_to_many 
+    Ends:
+      - Src: project_health_information
+        Dst: project_ids
+    Props: null
+  project_allocates_resources:
+    Mul: many_to_many
+    Ends:
+      - Src: project_resource_allocation 
+        Dst: project 
+    Props: null
+  project_has_files:
+    Mul: many_to_many
+    Ends:
+      - Src: project_file 
+        Dst: project 
+    Props: null
+  file_of_project:
+    Mul: many_to_many
+    Ends:
+      - Src: project
+        Dst: project_file 
+    Props: null
+  project_has_program_resources:
+    Mul: many_to_many
+    Ends:
+      - Src: project
+        Dst: program_resources 
+    Props: null
+  project_has_resources:
+    Mul: many_to_many
+    Ends:
+      - Src: program_resources 
+        Dst: project 
+    Props: null
+  project_has_manager:
+    Mul: many_to_many
+    Ends:
+      - Src: project_managers 
+        Dst: project 
+    Props: null
+  project_of_program:
+    Mul: many_to_many
+    Ends:
+      - Src: project 
+        Dst: program 
+    Props: null

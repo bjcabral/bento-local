@@ -1,0 +1,1344 @@
+PropDefinitions:
+#property of institution
+  institution_id:
+    Desc: A unique id assigned by the the PMO to the institution.
+    Src: None
+    Type: string
+    Req: true
+    Private: false
+#property of institution
+  institution_name:
+    Desc: The name of the institution sponsoring the program.
+    Src: None
+    Type: string
+    Req: false
+    Private: false
+#property of institution
+  institution_url:
+    Desc: The institute URL.
+    Src: None
+    Type: string
+    Req: false
+    Private: false
+#property of institution
+  institution_acronymn:
+    Desc: Official acronymn of the institute as it should be displayed on the UI.
+    Src: None
+    Type: string
+    Req: false
+    Private: false
+#property of program
+  program_id:
+    Desc: A unique idenifier for the program, we will use the ID for the FNL contract TO 
+    Src: None
+    Type: string
+    Req: true
+    Private: false
+#property of program
+  program_name:
+    Desc: Full name/title of the program.
+    Src: None
+    Type: string
+    Req: true
+    Private: false
+#property of program
+  program_acronym:
+    Desc: Official acronym for the name of the program as it should be displayed within the UI.
+    Src: None
+    Type: string
+    Req: true
+    Private: false
+#property of program
+  program_full_description:
+    Desc: Full length (multiple sentence) version of the program description.
+    Src: None
+    Type: string
+    Req: true
+    Private: false
+#property of program
+  program_external_url:
+    Desc: External url to which users should be directed to learn more about the program.
+    Src: None
+    Type: string
+    Req: true
+    Private: false
+#property of program
+  program_short_description:
+    Desc: Abbreviated (single sentence) version of the program description.
+    Src: None
+    Type: string
+    Req: true
+    Private: false
+#property of program
+  program_start_date:
+    Desc: Start date of the program.
+    Src: None
+    Type: string 
+    Req: false
+    Private: false
+#property of program
+  program_end_date:
+    Desc: End date of the program.
+    Src: None
+    Type: string 
+    Req: false
+    Private: false
+#property of program
+  sponsor:
+    Desc: Funding agency.
+    Src: None
+    Type: string
+    Req: false
+    Private: false
+#property of program
+  program_sort_order:
+    Desc: Value upon which to arbitrarily prioritize display of the program within the UI.
+    Src: None
+    Type: integer
+    Req: false
+    Private: false
+#property of program
+  state:
+    Desc: The possible states a study can be in.  All but `open` are equivalent to some type of locked state.
+    Src: None
+    Type:
+      - "active"
+      - "inactive"
+      - "closed"
+    Req: false
+    Private: false
+#property of program
+  program_manager:
+    Desc: Name of the program manager from the sponsoring agency.
+    Src: None
+    Type: string
+    Req: false
+    Private: false
+#property of program 
+  unit_of_work:
+    Desc: Units of work within the program as described in the official Work Breakdown Structure (WBS).
+    Src: None
+    Type: string 
+    Req: false
+    Private: false
+#property of program, project, study
+  reserch_area:
+    Desc: Official research areas corresponding to the program as described in the official WBS.
+    Src: None
+    Type: string 
+    Req: false
+    Private: false
+#property of program_files
+  program_file_id:
+    Desc: A unique identifier for any file associated with the program and uploaded or archived in the system.
+    Src: None
+    Type: string 
+    Req: true 
+    Private: false
+#property of program_files
+  program_file_description:
+    Desc: A short description of the file.
+    Src: None
+    Type: string 
+    Req: true 
+    Private: false
+#property of program_files
+  program_file_format:
+    Desc: The format of the file (zip, pdf, tab csv, etc).
+    Src: None
+    Type: string 
+    Req: true 
+    Private: false
+#property of program_files 
+  program_file_location:
+    Desc: File location or unique path/link to the file.
+    Src: None
+    Type: string
+    Req: true
+    Private: false
+#property of program_files 
+  program_file_name:
+    Desc: The name of the file associated with the program.
+    Src: None
+    Type: string
+    Req: true
+    Private: false
+#property of program_files 
+  program_file_size:
+    Desc: The size of the file in bytes.
+    Src: None
+    Type: string
+    Req: false
+    Private: false
+#property of program_files 
+  program_file_type:
+    Desc: A short description of the file type (presentation, budget, wbs, planning, finance).
+    Src: None
+    Type: string
+    Req: true
+    Private: false
+#property of program_files 
+  program_file_md5sum:
+    Desc: The calculated md5sum for this file.
+    Src: calculated 
+    Type: string
+    Req: false
+    Private: false
+#property of task_order 
+  task_order_id:
+    Desc: A unique task order identifier assigned by the contracts office.
+    Src: Contracts 
+    Type: string
+    Req: true
+    Private: false
+#property of task_order 
+  task_order_name:
+    Desc: The official task order name as assigned by contracts office.
+    Src: Contracts 
+    Type: string
+    Req: true
+    Private: false
+#property of task_order 
+  task_order_acronym:
+    Desc: The official task order acronym as per contracts.
+    Src: Contracts 
+    Type: string
+    Req: false
+    Private: false
+#property of task_order 
+  task_order_full_description:
+    Desc: Task order full (multiple sentences) description as per TO response and TO from government.
+    Src: WBS 
+    Type: string
+    Req: false
+    Private: false
+#property of task_order 
+  task_order_short_description:
+    Desc:  A one sentence TO description from WBS.
+    Src: WBS 
+    Type: string 
+    Req: true 
+    Private: false
+#property of task_order 
+  task_order_type:
+    Desc: Task order type based on funding sources (severable, non-severable, moonshot, etc)
+    Src: None
+    Type: string
+    Req: true 
+    Private: false
+#property of task_order 
+  to_date_of_approval:
+    Desc: Approval date for TO from Contracts office.
+    Src: Contracts 
+    Type: date 
+    Req: true 
+    Private: false
+#property of task_order 
+  to_start_date:
+    Desc: Starting date for TO based on approval.
+    Src: Contracts 
+    Type: date 
+    Req: true
+    Private: false
+#property of task_order 
+  to_end_date:
+    Desc: End date for this TO if any.
+    Src: None
+    Type: date 
+    Req: false
+    Private: false
+#property of task_order 
+  to_state:
+    Desc: Task Order status (approved, pending approval, in-review, rejected, closed).
+    Src: None
+    Type: string
+    Req: true 
+    Private: false
+#property of task_order
+  to_manager:
+    Desc: Task Order FNL project manager.
+    Src: None
+    Type: string
+    Req: true
+    Private: false
+#property of task_order 
+  to_acquisition_type:
+    Desc: How the order will be executed, using in-house resources, subcontracts or hybrid.
+    Src: None
+    Type: string
+    Req: true
+    Private: false
+#property of task_order 
+  to_research_area:
+    Desc: The corresponding research area for this task order.
+    Src: WBS
+    Type: string
+    Req: false
+    Private: false
+#property of task_order 
+  to_unit_of_work:
+    Desc: The corresponding unit of work for this task order based on WBS.
+    Src: WBS 
+    Type: string
+    Req: true
+    Private: false
+#property of task_order_files 
+  to_file_id:
+    Desc: A unique identifier for any files associated with this TO and uploaded or archive in this system.
+    Src: None
+    Type: string
+    Req: true
+    Private: false
+#property of task_order_files 
+  to_file_description:
+    Desc: A description of the file corresponding to this TO.
+    Src: None
+    Type: string
+    Req: true 
+    Private: false
+#property of task_order_files 
+  to_file_format:
+    Desc: The format of the file, txt, csv, tabs, pdf, word, etc.
+    Src: None
+    Type: string
+    Req: true 
+    Private: false
+#property of task_order_files
+  to_file_location:
+    Desc: The location, link or path to the file.
+    Src: None
+    Type: string
+    Req: true 
+    Private: false
+#property of task_order_files 
+  to_file_name:
+    Desc: The name of the file.
+    Src: None
+    Type: string 
+    Req: true 
+    Private: false
+#property of task_order_files 
+  to_file_size:
+    Desc: The size of the file in bytes, megs, etc.
+    Src: None
+    Type: string
+    Req: true
+    Private: false
+#property of task_order_file 
+  to_file_type:
+    Desc: Short description of file type, for example, finance file, planning, wbs, contracts.
+    Src: None
+    Type: string
+    Req: true
+    Private: false
+#property of task_order_file
+  to_md5sum:
+    Desc: The calculated md5sum of the stored file.
+    Src: None
+    Type: string
+    Req: true 
+    Private: false
+#property of project 
+  project_name:
+    Desc: Official project name as per the name in the WBS and the TO.
+    Src: None
+    Req: true 
+    Private: false
+#property of project 
+  project_acronym:
+    Desc: Official project acronym as defined in the TO and the WBS.
+    Src: WBS 
+    Req: true 
+    Private: false
+#property of project 
+  project_full_description:
+    Desc: Multi sentence description of the project, aligned with description in WBS and TO.
+    Src: None
+    Req: true 
+    Private: false
+#property of project 
+  project_external_url:
+    Desc: If available, a url where users can go and learn more about the project, it could be the project's Wiki page.
+    Src: None
+    Type: string
+    Req: false 
+    Private: false
+#property of project 
+  project_short_description:
+    Desc: One sentence description of the project corresponding to the WBS and or TO. 
+    Src: None
+    Type: string 
+    Req: true 
+    Private: false
+#property of project
+  project_type:
+    Desc: Project type as per TO, could be serverable, non-severable, moonshot, other.
+    Src: None
+    Type:
+      - "severable"
+      - "non-severable"
+      - "moonshot"
+      - "other"
+    Req: false
+    Private: false
+#property of project 
+  project_date_of_approval:
+    Desc: Approval date based on TO approval 
+    Src: TO 
+    Type: date 
+    Req: true 
+    Private: false
+#property of project 
+  project_start_date:
+    Desc: Project starting date based on project schedule.
+    Src: None 
+    Type: date 
+    Req: true 
+    Private: false
+#property of project 
+  project_end_date:
+    Desc: Project end date based on project schedule.
+    Src: None
+    Type: date 
+    Req: true 
+    Private: false
+#property of project 
+  project_status:
+    Desc: Risk status of the project 1-Green, 2-Yellow, 3-Red. Align with IPR where applicable.
+    Src: PMO 
+    Type: integer 
+    Req: true 
+    Private: false
+#property of project 
+  project_manager:
+    Desc: The name of the project manager for this project. Sourced from project_managers.
+    Src: project_managers 
+    Type: string 
+    Req: true 
+    Private: false
+#property of project 
+  project_sort_order:
+    Desc: Sort order for the project table displayed in UI.
+    Src: None
+    Type:
+      - "asc"
+      - "des" 
+    Req: true 
+    Private: false
+#property of project 
+  project_acquisition_type:
+    Desc: How will the project be executed, with in-house resources, subcontrancs or hybrid.
+    Src: None
+    Type:
+      - "in-house"
+      - "subcontracts"
+      - "hybrid" 
+    Req: true
+    Private: false
+#property of project 
+  project_gov_sponsor:
+    Desc: Government organization sponsoring the project.
+    Src: None
+    Type: string
+    Req: true 
+    Private: false
+#property of project 
+  project_gov_project_manager:
+    Desc: The governmen project manager in charge of the project. This is also the POC for the FNL project manager.
+    Src: None
+    Type: string
+    Req: true 
+    Private: false
+#property of project 
+  project_task_order_id:
+    Desc: The TO id to which this project corresponds. Sourced from task_order_id
+    Src: None
+    Type: string
+    Req: true 
+    Private: false
+#property of project_finance 
+  project_id:
+    Desc: The corresponding project ID for this project. Sourced from project_id
+    Src: None
+    Type: string
+    Req: true 
+    Private: false
+#property of project_finance 
+  program:
+    Desc: Corresponding program for this project.
+    Src: None
+    Type: string
+    Req: true 
+    Private: false
+#property of project_finance 
+  research_area:
+    Desc: Corresponding reserch area for this project (relationship with TO research area.
+    Src: None
+    Type: string 
+    Req: true 
+    Private: false
+#property of project_finance 
+  unit_of_work:
+    Desc: Corresponding Unit of Work for this project.
+    Src: None
+    Type: string 
+    Req: true 
+    Private: false
+#property of project_finance 
+  proposed_budget:
+    Desc: Budget proposed in the TO response for this project.
+    Src: None
+    Type: number 
+    Req: true 
+    Private: false
+#property of project_finance 
+  revised_budget_post_prosal:
+    Desc: Revised budget after response to TO.
+    Src: None
+    Type: number 
+    Req: false
+    Private: false
+#property of project_finance 
+  project_approved_budget:
+    Desc: Approved budget as per TO.
+    Src: None
+    Type: number 
+    Req: true 
+    Private: false
+#property of project_finance 
+  project_budget_amount_pending_fcas:
+    Desc: Amount of portion of the budget pending approval in the FCAS system.
+    Src: None
+    Type: number 
+    Req: false
+    Private: false
+#property of project_finance 
+  project_odc_budget:
+    Desc: The portion of the project budget allocated to odc.
+    Src: None
+    Type: number 
+    Req: false 
+    Private: false
+#property of project_finance 
+  project_subcontract_budget:
+    Desc: The portion of the project budget allocated for subcontract.
+    Src: None
+    Type: number 
+    Req: false 
+    Private: false
+#property of project_finance 
+  project_labor_and_fringe_budget:
+    Desc: The portion of the project budget allocated for labor and fringe.
+    Src: None
+    Type: number 
+    Req: false
+    Private: false
+#property of project_finance 
+  project_funding_source:
+    Desc: Source of funding for the project, severable, non-severable, moonshot, other.
+    Src: None
+    Type:
+      - "severable"
+      - "non-severable"
+      - "moonshot"
+      - "other" 
+    Req: true 
+    Private: false
+#property of project_finance 
+  project_funded_amount:
+    Desc: The amount for which the project was funded, regarless of the actual budge. For example, incrementally funded.
+    Src: None
+    Type: number 
+    Req: true 
+    Private: false
+#property of project_finance 
+  project_funds_expiration_date:
+    Desc: The date when the funds will expired, for appropriated severable, one year after funding mod.
+    Src: None
+    Type: date 
+    Req: true 
+    Private: false
+#property of project_finance 
+  project_cost_to_date_labor:
+    Desc: The cost against the labor+fringe budget allocation to date.
+    Src: finance 
+    Type: number 
+    Req: true 
+    Private: false
+#property of project_finance 
+  project_cost_to_date_odc:
+    Desc: The cost against the odc budget allocation to date.
+    Src: None
+    Type: number 
+    Req: true 
+    Private: false
+#property of project_finance 
+  project_cost_to_date_subcontract:
+    Desc: The cost to date against the subcontract budget allocation.
+    Src: None
+    Type: number 
+    Req: true 
+    Private: false
+#property of project_finance 
+  project_estimate_to_completion_labor:
+    Desc:  The estimated amount required to finish the project, this is calculated based on planned resource allocation, budget and cost-to-date.
+    Src: None
+    Type: number 
+    Req: true 
+    Private: false
+#property of project_finance 
+  project_estimate_to_completion_odc:
+    Desc:  The estimated amount required to finish the project, this is calculated based on planned ODC, budget and cost-to-date.
+    Src: None
+    Type: number 
+    Req: true 
+    Private: false
+#property of project_finance 
+  project_estimate_to_completion_subcontract:
+    Desc:  The estimated amount required to finish the project, this is calculated based on planned subcontracts, budget and cost-to-date.
+    Src: None
+    Type: number 
+    Req: true 
+    Private: false
+#property of project_finance 
+  project_estimate_at_completion_labor:
+    Desc:  The total cost of the project labor at the end of the project, ideally should match the total budget for the project.
+    Src: None
+    Type: number 
+    Req: true 
+    Private: false
+#property of project_finance 
+  project_estimate_at_completion_odc:
+    Desc:  The total cost of the project odc at the end of the project, ideally should match the total budget for the project.
+    Src: None
+    Type: number 
+    Req: true 
+    Private: false
+#property of project_finance 
+  project_estimate_completion_subcontract:
+    Desc:  The total cost of the project subcontract at the end of the project, ideally should match the total budget for the project.
+    Src: None
+    Type: number 
+    Req: true 
+    Private: false
+#property of project_finance 
+  project_budget_comments:
+    Desc: Any comments related to this project budget.
+    Src: None
+    Type: string 
+    Req: true 
+    Private: false
+#property of project_finance 
+  total_project_budget:
+    Desc: Total budget for the project including labor+fringe, ODC, and subcontract.
+    Src: None
+    Type: number 
+    Req: true 
+    Private: false
+#property of project_finance 
+  project_budget_variance_labor:
+    Desc: The variance in labor when comparing Estimate at Completion and the project budget. Ideally, should be zero.
+    Src: None
+    Type: number 
+    Req: true 
+    Private: false
+#property of project_finance 
+  project_budget_variance_odc:
+    Desc: The variance in odc when comparing Estimate at Completion and the project budget. Ideally, should be zero.
+    Src: None
+    Type: number 
+    Req: true 
+    Private: false
+#property of project_finance 
+  project_budget_variance_subcontract:
+    Desc: The variance in subcontract when comparing Estimate at Completion and the project budget. Ideally, should be zero.
+    Src: None
+    Type: number 
+    Req: true 
+    Private: false
+#property of project_finance 
+  total_project_budget_variance:
+    Desc: The total variance when comparing EAC to Budget. ideally, should be zero.
+    Src: None
+    Type: number 
+    Req: true 
+    Private: false
+#property of project_finance 
+  total_project_etc:
+    Desc: The total project Estimate-to-completion, including labor, odc, and subcontract ETC.
+    Src: None
+    Type: number 
+    Req: true 
+    Private: false
+#property of project_finance 
+  total_project_eac:
+    Desc: The total project Estimate-At-completion, including labor, odc, and subcontract EAC.
+    Src: None
+    Type: number 
+    Req: true 
+    Private: false
+
+#property of project_subcontract
+  project_subcontract_number:
+    Desc: A unique identifier for the subcontract as assigned by contracts office
+    Src: Contracts
+    Type: string
+    Req: true
+    Private: false
+#property of project_subcontract
+  project_subcontract_vendor:
+    Desc: The name of the vendor providing services for this subcontract
+    Src: Contracts
+    Type: string
+    Req: true
+    Private: false
+#property  of project_subcontract
+  project_subcontract_budget:
+    Desc: The budget allocated for this subcontract
+    Src: finance
+    Type: number 
+    Req: true
+    Private: false
+#property of project_subcontract
+  project_subcontract_pop_start:
+    Desc: The date when the subcontract was fully executed
+    Src: Contracts
+    Type: date
+    Req: true
+    Private: false
+#property of project_subcontract
+  project_subcontract_pop_end:
+    Desc: The date when this subcontract is scheduled to end
+    Src: Contracts
+    Type: date
+    Req: true
+    Private: false
+#property of project_subcontract
+  project_subcontract_funding_source:
+    Desc: The type of funding source (severable, non-severable, moonshot,etc.)
+    Src: Contracts
+    Type: 
+      - "severable"
+      - "non-severable"
+      - "moonshot"
+      - "other"
+    Req: true
+    Private: false
+#property of project_subcontract
+  project_subcontract_co:
+    Desc: The FNL contracting officer name
+    Src: Contracts
+    Type: string
+    Req: true
+    Private: false
+#proprty of project_subcontract
+  project_subcontract_pm:
+    Desc: The name of the FNL Project Manager assigned to this subcontract
+    Src: PMO
+    Type: string
+    Req: true
+    Private: false
+#property of project_subcontract
+  project_subcontract_supported_project_id:
+    Desc: What project IDs are supported by this subcontract    
+    Src: PMO
+    Type: strig
+    Req: true
+    Private: false
+#property of project_subcontract
+  project_subcontract_supported_project_name:
+    Desc: The name of the project or projects supported by this subcontract
+    Src: PMO
+    Type: string
+    Req: true
+    Private: false
+#property of project_subcontract
+  project_subcontract_vendor_poc:
+    Desc: The point of contact for the vendor serving this subcontract
+    Src: PMO
+    Type: strig
+    Req: true
+    Private: false
+#property of project_subcontract
+  project_subcontract_cost_to_date:
+    Desc: The cost to date of the subcontract as per finance
+    Src: finance
+    Type: number 
+    Req: true
+    Private: false
+#property of project_subcontract
+  project_subcontract_balance:
+    Desc: The current budget balance for this subcontract
+    Src: calculated
+    Type: number 
+    Req: true
+    Private: false
+#property of project_subcontract
+  project_subcontract_budget_percentage_available:
+    Desc: The percentage of the budget available to the subcontract
+    Src: calculated
+    Type: number 
+    Req: true
+    Private: false 
+#property of project_health_information 
+  project_risk_status:
+    Desc: A traffic light style project status 1=Green, 2=Yellow, and 3=Red.
+    Src: PMO 
+    Type: number
+    Req: true 
+    Private: false
+#property of project_health_information 
+  project_last_month_activities:
+    Desc: A multiline description of what was done last month.
+    Src: PMO 
+    Type: string
+    Req: true 
+    Private: false
+#property of project_health_information 
+  project_current_month_activities:
+    Desc: A multiline description of the project's current activities for the month.
+    Src: PMO 
+    Type: string
+    Req: true 
+    Private: false
+#property of project_health_information 
+  project_next_month_activities:
+    Desc: A multiline description of next month planned activities.
+    Src: None
+    Type: string
+    Req: true 
+    Private: false
+#property of project_health_information 
+  project_risks:
+    Desc: A description of current project risks.
+    Src: None
+    Type: string
+    Req: true 
+    Private: false
+#property of project_health_information 
+  project_risk_level:
+    Desc: The level of the possibility that this risk will manifest.
+    Src: PMO 
+    Type: 
+      - "High"
+      - "Medium"
+      - "Low"
+    Req: true 
+    Private: false
+#property of project_health_information 
+  project_risk_mitigation:
+    Desc: A description of how this risk can be mitigated.
+    Src: None
+    Type: string
+    Req: true
+    Private: false
+#property of project_health_information 
+  project_risk_action_plan:
+    Desc: What action will be taken for this risk? Avoid, Accept, Mitigate.
+    Src: None
+    Type:
+       - "Avoid"
+       - "Accept"
+       - "Mitigate" 
+    Req: true 
+    Private: false
+#property of project_health_information 
+  project_risk_status:
+    Desc: Definition of the status of the risk open, mittigated, closed.
+    Src: PMO 
+    Type:  
+      - "open"
+      - "mitigated"
+      - "avoided"
+      - "accepted without mitigation"
+    Req: true 
+    Private: false
+#property of project_healh_information 
+  project_risk_comments:
+    Desc: Any comments related to this risk.
+    Src: None
+    Type: string
+    Req: false
+    Private: false
+#property of project_resource_allocation 
+  resource_name:
+    Desc: The name of the resource supporting this project, must match a resource in the program_resources.
+    Src: program_resources 
+    Type: string
+    Req: true 
+    Private: false
+#property of project_resource_allocation 
+  resource_labor_category:
+    Desc: The labor category for this resource as assigned by HR.
+    Src: HR 
+    Type: string
+    Req: true
+    Private: false
+#property of project_resource_allocation 
+  percentage_allocation_jan:
+    Desc: What percentage hours will required the support of this resource in this project for this month.
+    Src: None
+    Type: percentage
+    Req: true 
+    Private: false
+#property of project_resource_allocation 
+  percentage_allocation_feb:
+    Desc: What percentage hours will required the support of this resource in this project for this month.
+    Src: None
+    Type: percentage
+    Req: true 
+    Private: false
+#property of project_resource_allocation 
+  percentage_allocation_mar:
+    Desc: What percentage hours will required the support of this resource in this project for this month.
+    Src: None
+    Type: percentage
+    Req: true 
+    Private: false
+#property of project_resource_allocation 
+  percentage_allocation_apr:
+    Desc: What percentage hours will required the support of this resource in this project for this month.
+    Src: None
+    Type: percentage
+    Req: true 
+    Private: false
+#property of project_resource_allocation 
+  percentage_allocation_may:
+    Desc: What percentage hours will required the support of this resource in this project for this month.
+    Src: None
+    Type: percentage
+    Req: true 
+    Private: false
+#property of project_resource_allocation 
+  percentage_allocation_jun:
+    Desc: What percentage hours will required the support of this resource in this project for this month.
+    Src: None
+    Type: percentage
+    Req: true 
+    Private: false
+#property of project_resource_allocation 
+  percentage_allocation_jul:
+    Desc: What percentage hours will required the support of this resource in this project for this month.
+    Src: None
+    Type: percentage
+    Req: true 
+    Private: false
+#property of project_resource_allocation 
+  percentage_allocation_aug:
+    Desc: What percentage hours will required the support of this resource in this project for this month.
+    Src: None
+    Type: percentage
+    Req: true 
+    Private: false
+#property of project_resource_allocation 
+  percentage_allocation_sep:
+    Desc: What percentage hours will required the support of this resource in this project for this month.
+    Src: None
+    Type: percentage
+    Req: true 
+    Private: false
+#property of project_resource_allocation 
+  percentage_allocation_oct:
+    Desc: What percentage hours will required the support of this resource in this project for this month.
+    Src: None
+    Type: percentage
+    Req: true 
+    Private: false
+#property of project_resource_allocation 
+  percentage_allocation_nov:
+    Desc: What percentage hours will required the support of this resource in this project for this month.
+    Src: None
+    Type: percentage
+    Req: true 
+    Private: false
+#property of project_resource_allocation 
+  percentage_allocation_dec:
+    Desc: What percentage hours will required the support of this resource in this project for this month.
+    Src: None
+    Type: percentage
+    Req: true 
+    Private: false
+#property of project_ids 
+  project_id:
+    Desc: A unique identifier for the project assigned during the WBS and the TO response and managed by finance 
+    Src: finance 
+    Type: string
+    Req: true 
+    Private: false
+#property of project_ids 
+  project_name:
+    Desc: The official name for this project based on the name assigned in the WBS 
+    Src: WBS 
+    Type: string
+    Req: true 
+    Private: false
+#property of project_ids 
+  portfolio_name:
+    Desc:  The name of the project in the system of the sponsoring organization.
+    Src: None
+    Type: string
+    Req: false
+    Private: false
+#property of project_ids 
+  research_area:
+    Desc: The official Research Area where the project resides based on the WBS.
+    Src: WBS 
+    Type: string 
+    Req: true 
+    Private: false
+#property of project_ids 
+  unit_of_work:
+    Desc: The corresponding Unit of Work based on the WBS.
+    Src: WBS 
+    Type: string 
+    Req: true 
+    Private: false
+#property of project_file 
+  project_file_id:
+    Desc: A unique identifier for any files associated with this TO and uploaded or archive in this system.
+    Src: None
+    Type: string
+    Req: true
+    Private: false
+#property of project_files 
+  project_file_description:
+    Desc: A description of the file corresponding to this TO.
+    Src: None
+    Type: string
+    Req: true 
+    Private: false
+#property of project_files 
+  project_file_format:
+    Desc: The format of the file, txt, csv, tabs, pdf, word, etc.
+    Src: None
+    Type: string
+    Req: true 
+    Private: false
+#property of project_files
+  project_file_location:
+    Desc: The location, link or path to the file.
+    Src: None
+    Type: string
+    Req: true 
+    Private: false
+#property of project_files 
+  project_file_name:
+    Desc: The name of the file.
+    Src: None
+    Type: string 
+    Req: true 
+    Private: false
+#property of project_files 
+  project_file_size:
+    Desc: The size of the file in bytes, megs, etc.
+    Src: None
+    Type: string
+    Req: true
+    Private: false
+#property of project_files 
+  project_file_type:
+    Desc: Short description of file type, for example, finance file, planning, wbs, contracts.
+    Src: None
+    Type: string
+    Req: true
+    Private: false
+#property of project_file
+  project_file_md5sum:
+    Desc: The calculated md5sum of the stored file.
+    Src: None
+    Type: string
+    Req: true 
+    Private: false
+#property of program_resources 
+  employee_id:
+    Desc: The unique identifier assigned to this employee by HR.
+    Src: HR 
+    Type: number
+    Req: true 
+    Private: true 
+#property of program_resources 
+  employee_name:
+    Desc: The official name of the employee as recorded by HR.
+    Src: HR 
+    Type: string
+    Req: true
+    Private: false 
+#property of program_resources 
+  employee_labor_category:
+    Desc: The labor category assigned to this employee by HR.
+    Src: HR 
+    Type: string
+    Req: true 
+    Private: false
+#property of resource_rate_config 
+  year_working_hours:
+    Desc: The number of working hours in a year as defined by Finance.
+    Src: finance 
+    Type: integer 
+    Req: true 
+    Private: true 
+#property of program_resources
+  base_hourly_rate:
+    Desc: The hourly rate for this employee without fringe.
+    Src: finance 
+    Type: number
+    Req: true 
+    Private: true 
+#property of program_resources 
+  planned_promotion_percentage:
+    Desc: The percentage to be applied if a promotion is given to this employee.
+    Src: finance 
+    Type: number 
+    Req: true 
+    Private: true 
+#property of program_resources 
+  planned_promotion_amount:
+    Desc: Applied planned_promotin_percentage to base_hourly_rate.
+    Src: calculated 
+    Type: currenty 
+    Req: true 
+    Private: true 
+#property of resource_rate_config 
+  merit_increase_percentage:
+    Desc: The percentage of merit increase to be applied to the hourly_rate_with_fringe.
+    Src: finance 
+    Type: number 
+    Req: true 
+    Private: true 
+#property of program_resources 
+  merit_increase_amount:
+    Desc: The amount after applying the merit_increase_percentage to the base_hourly_rate.
+    Src: calculated 
+    Type: number 
+    Req: true 
+    Private: true 
+#property of resource_rate_config 
+  fringe_percentage:
+    Desc: The percentage of fringe to be applied to base_hourly_rate as established by finance.
+    Src: finance 
+    Type: number 
+    Req: true 
+    Private: true 
+#property of program_resources 
+  hourly_rate_with_fringe:
+    Desc: The corresponding hourly rate after applying fringe, promotion, merit increase.
+    Src: calculated 
+    Type: number 
+    Req: true 
+    Private: true 
+#property of resource_rate_config 
+  month_hours_jan:
+    Desc: Number of effective working hours for this months as established by finance.
+    Src: finance 
+    Type: integer 
+    Req: true 
+    Private: true 
+#property of resource_rate_config 
+  month_hours_feb:
+    Desc: Number of effective working hours for this months as established by finance.
+    Src: finance 
+    Type: integer 
+    Req: true 
+    Private: true 
+#property of resource_rate_config 
+  month_hours_mar:
+    Desc: Number of effective working hours for this months as established by finance.
+    Src: finance 
+    Type: integer 
+    Req: true 
+    Private: true 
+#property of resource_rate_config 
+  month_hours_apr:
+    Desc: Number of effective working hours for this months as established by finance.
+    Src: finance 
+    Type: integer 
+    Req: true 
+    Private: true 
+#property of resource_rate_config 
+  month_hours_may:
+    Desc: Number of effective working hours for this months as established by finance.
+    Src: finance 
+    Type: integer 
+    Req: true 
+    Private: true 
+#property of resource_rate_config 
+  month_hours_jun:
+    Desc: Number of effective working hours for this months as established by finance.
+    Src: finance 
+    Type: integer 
+    Req: true 
+    Private: true 
+#property of resource_rate_config 
+  month_hours_jul:
+    Desc: Number of effective working hours for this months as established by finance.
+    Src: finance 
+    Type: integer 
+    Req: true 
+    Private: true 
+#property of resource_rate_config 
+  month_hours_aug:
+    Desc: Number of effective working hours for this months as established by finance.
+    Src: finance 
+    Type: integer 
+    Req: true 
+    Private: true 
+#property of resource_rate_config 
+  month_hours_sep:
+    Desc: Number of effective working hours for this months as established by finance.
+    Src: finance 
+    Type: integer 
+    Req: true 
+    Private: true 
+#property of resource_rate_config
+  month_hours_oct:
+    Desc: Number of effective working hours for this months as established by finance.
+    Src: finance 
+    Type: integer 
+    Req: true 
+    Private: true 
+#property of resource_rate_config 
+  month_hours_nov:
+    Desc: Number of effective working hours for this months as established by finance.
+    Src: finance 
+    Type: integer 
+    Req: true 
+    Private: true 
+#property of resource_rate_config
+  month_hours_dec:
+    Desc: Number of effective working hours for this months as established by finance.
+    Src: finance 
+    Type: integer 
+    Req: true 
+    Private: true 
+#property of program_resources 
+  month_est_cost_jan:
+    Desc: Estimated cost based on effective rate for this month assuming 100% allocation.
+    Src: finance 
+    Type: number 
+    Req: true 
+    Private: true 
+#property of program_resources 
+  month_est_cost_feb:
+    Desc: Estimated cost based on effective rate for this month assuming 100% allocation.
+    Src: finance 
+    Type: number 
+    Req: true 
+    Private: true 
+#property of program_resources 
+  month_est_cost_mar:
+    Desc: Estimated cost based on effective rate for this month assuming 100% allocation.
+    Src: finance 
+    Type: number 
+    Req: true 
+    Private: true 
+#property of program_resources 
+  month_est_cost_apr:
+    Desc: Estimated cost based on effective rate for this month assuming 100% allocation.
+    Src: finance 
+    Type: number 
+    Req: true 
+    Private: true 
+#property of program_resources 
+  month_est_cost_may:
+    Desc: Estimated cost based on effective rate for this month assuming 100% allocation.
+    Src: finance 
+    Type: number 
+    Req: true 
+    Private: true 
+#property of program_resources 
+  month_est_cost_jun:
+    Desc: Estimated cost based on effective rate for this month assuming 100% allocation.
+    Src: finance 
+    Type: number 
+    Req: true 
+    Private: true 
+#property of program_resources 
+  month_est_cost_jul:
+    Desc: Estimated cost based on effective rate for this month assuming 100% allocation.
+    Src: finance 
+    Type: number 
+    Req: true 
+    Private: true 
+#property of program_resources 
+  month_est_cost_aug:
+    Desc: Estimated cost based on effective rate for this month assuming 100% allocation.
+    Src: finance 
+    Type: number 
+    Req: true 
+    Private: true 
+#property of program_resources 
+  month_est_cost_sep:
+    Desc: Estimated cost based on effective rate for this month assuming 100% allocation.
+    Src: finance 
+    Type: number 
+    Req: true 
+    Private: true 
+#property of program_resources 
+  month_est_cost_oct:
+    Desc: Estimated cost based on effective rate for this month assuming 100% allocation.
+    Src: finance 
+    Type: number 
+    Req: true 
+    Private: true 
+#property of program_resources 
+  month_est_cost_nov:
+    Desc: Estimated cost based on effective rate for this month assuming 100% allocation.
+    Src: finance 
+    Type: number 
+    Req: true 
+    Private: true 
+#property of program_resources 
+  month_est_cost_dec:
+    Desc: Estimated cost based on effective rate for this month assuming 100% allocation.
+    Src: finance 
+    Type: number 
+    Req: true 
+    Private: true 
+#property of program_resources 
+  position_status:
+    Desc: The status of the position (open, hired, closed, approved but not funded, approved, pending approval).
+    Src: finance 
+    Type: 
+      - "open"
+      - "hired"
+      - "closed"
+      - "approved, but not funded"
+      - "approved"
+      - "pending approval"
+    Req: true 
+    Private: false
+#property of project_managers 
+  project_manager_name:
+    Desc: The name of the project manager.
+    Src: None
+    Type: string 
+    Req: true 
+    Private: false
+#property of project_managers 
+  project_manager_level:
+    Desc: Project manager level or labor category, for example TPM I, TPM II, TPM III 
+    Src: None
+    Type: string
+    Req: true
+    Private: false
+#property of project_managers 
+  project_manager_email:
+    Desc: Work email for this project manager, do not use personal emails.
+    Src: None
+    Type: string
+    Req: true
+    Private: false
+#property of project_managers 
+  project_manager_phone_number:
+    Desc: Official project manager phone number, office number, do not use personal phone numbers.
+    Src: None
+    Type: string
+    Req: true
+    Private: false
+#property of project_managers 
+  project_manager_location:
+    Desc: The location where this project manager works (Shady Grove, Frederick Base, Frederick ATRF, Bethesda).
+    Src: None
+    Type: string
+    Req: false
+    Private: false

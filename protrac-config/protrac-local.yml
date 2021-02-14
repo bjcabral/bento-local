@@ -13,13 +13,13 @@ Config:
 
   # Schema files' locations
   schema:
-    - ../bento-model/model-desc/protrac_model_file.yaml
-    - ../bento-model/model-desc/protrac_model_properties.yaml
+    - ../protrac-config/protrac-model/model-desc/protrac_model_file.yaml
+    - ../protrac-config/protrac-model/model-desc/protrac_model_properties.yaml
 
       #- ../bento-model/model-desc/bento_tailorx_model_file.yaml
       #- ../bento-model/model-desc/bento_tailorx_model_properties.yaml
   #Property file location
-  prop_file: config/props-bento-ext.yml
+  prop_file: ../protrac-config/props-protrac-ext.yml
   #prop_file: config/props-bento-ext.yml
 
   # Skip validations, aka. Cheat Mode
@@ -34,7 +34,7 @@ Config:
   no_confirmation: false 
   # Max violations to display, default is 10
   max_violations: 10
-  no_parents: true
+  no_parents: false 
 
   # S3 bucket name, if you are loading from an S3 bucket
   s3_bucket:
@@ -43,4 +43,4 @@ Config:
   # Loading mode, can be UPSERT_MODE, NEW_MODE or DELETE_MODE, default is UPSERT_MODE
   loading_mode: UPSERT_MODE
   # Location of dataset
-  dataset: /home/ubuntu/bento-local/mydata
+  dataset: /home/ubuntu/bento-local/protrac-data

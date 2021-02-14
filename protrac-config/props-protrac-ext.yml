@@ -1,0 +1,46 @@
+Properties:
+  domain: trialcommons.cancer.gov
+  rel_prop_delimiter: "$"
+
+  plurals:
+    institution: institutions
+    program: programs
+    programs: programs
+    project: projects
+    project_id: project_ids
+    program_files: program_files
+    task_order: task_orders
+    task_order_files: task_order_files
+    project_ids: project_ids
+    project_resource_allocation: project_resource_allocations
+    project_file: project_files
+    project_files: project_files
+    program_resource: program_resources
+    program_resources: program_resources
+    project_managers: project_managers
+    project_finance: project_finances
+    project_health_information: project_health_informations
+
+  type_mapping:
+    string: String
+    number: Float
+    integer: Int
+    boolean: Boolean
+    array: Array
+    object: Object
+    datetime: DateTime
+    date: Date
+    currency: Currency
+    TBD: String
+
+  id_fields:
+    project: project_id
+    program: program_id
+    employee: employee_id
+    task_order: task_order_id
+    program_file: program_file_id
+    to_file: to_file_id
+    project_file: project_file_id
+    institution: institution_id
+    project_subcontrac: project_subcontrac_number
+

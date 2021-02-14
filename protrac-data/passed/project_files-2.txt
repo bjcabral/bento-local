@@ -1,0 +1,2 @@
+type	project_file_id	project_file_description	project_file_format	project_file_location	project_file_name	project_file_size	project_file_type	project_file_md5sum
+project_file	CRDC-rfp-001	The RFP for this project	pdf	//s3/path-to-file	crdc-rfp001.pdf	89k	RFP	993884kkk

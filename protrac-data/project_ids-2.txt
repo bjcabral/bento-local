@@ -1,0 +1,5 @@
+type	project_id	project_name	portfolio_name	research_area	unit_of_work
+project_ids	600.300.21.01.016.004	Data Commons Serv	Data Common Services	Data Common Services	Biomedical Operations Support
+project_ids	600.300.21.01.016.004.0001	NCI Can Res Data Com FW	Project: Cancer Data Commons Framework	Data Common Services	Biomedical Operations Support
+project_ids	600.300.21.01.016.004.0002	NCI Can Res Data Commons	Project: Cancer Research Data Commons	Data Common Services	Biomedical Operations Support
+project_ids	600.300.21.01.016.004.0002.003	NCI Can Res Data Comm TPM	Project: Cancer Research Data Commons	Data Common Services	Biomedical Operations Support

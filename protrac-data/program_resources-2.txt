@@ -1,0 +1,4 @@
+type	employee_id	employee_name	employee_labor_category	base_hourly_rate	planned_promotion_percentage	planned_promotion_amount	merit_increase_amount	hourly_rate_with_fringe	month_est_cost_jan	month_est_cost_feb	month_est_cost_mar	month_est_cost_apr	month_est_cost_may	month_est_cost_jun	month_est_cost_jul	month_est_cost_aug	month_est_cost_sep	month_est_cost_oct	month_est_cost_nov	month_est_cost_dec	position_status
+program_resources	56356	Braulio Cabral	TPM III	10	0.2	2	5	19	300	300	300	300	300	300	300	300	300	300	300	300	hired
+program_resources	56489	Todd Pihl	TPM III	10	0.2	2	5	19	300	300	300	300	300	300	300	300	300	300	300	300	hired
+program_resources	56784	John Otridge	TPM III	10	0.2	2	5	19	300	300	300	300	300	300	300	300	300	300	300	300	hired

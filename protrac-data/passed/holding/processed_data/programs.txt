@@ -1,0 +1,2 @@
+type	program_id	program_name	program_acronym	program_full_description	program_external_url	program_short_description	start_date	end_date	sponsor	program_sort_order	state	program_manager	unit_of_work	research_area
+program	CRDC-0001	Cancer Research Data Commons	CRDC	The Cancer Research Data Commons is an initiative sponsored by CBIIT to provide researchers with a trusted source of data	http://crdc.nci.gov	A cancer research data repository	2019-05-25	2025-10-30	CBIIT	1	active	John Otridge	Biomedical Informatics Support	CBIIT

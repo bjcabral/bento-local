@@ -1,0 +1,3 @@
+type	program_file_id	program_file_description	program_file_format	program_file_location	program_file_name	program_file_size	program_file_type	program_file_md5sum
+program_files	file-0001	test file for the program	pdf	/s3/name/path	the_program.pdf	10kb	finance	i3ke3299iekk
+

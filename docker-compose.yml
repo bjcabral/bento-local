@@ -10,7 +10,7 @@ services:
         NEO4J_USER: ${NEO4J_USER}
         NEO4J_PASS: ${NEO4J_PASS}
     environment:
-      - NEO4J_GRAPHQL_ENDPOINT=http://neo4j:7474/graphql/
+      - NEO4J_GRAPHQL_ENDPOINT=http://54.145.134.232:7474/graphql/
       - GRAPHQL_SCHEMA=graphql/bento-extended.graphql
     depends_on:
       - neo4j
@@ -29,8 +29,8 @@ services:
       args:
         FRONTEND_SOURCE_FOLDER: ${FRONTEND_SOURCE_FOLDER}
     environment:
-      - REACT_APP_BACKEND_API=http://localhost:8080/v1/graphql/
-      - REACT_APP_ABOUT_CONTENT_URL=https://raw.githubusercontent.com/CBIIT/bento-frontend/master/src/content/dev/aboutPagesContent.yaml
+      - REACT_APP_BACKEND_API=http://54.145.134.232:8080/v1/graphql/
+      - REACT_APP_ABOUT_CONTENT_URL=https://raw.githubusercontent.com/bjcabral/bento-frontend/master/src/content/dev/aboutPagesContent.yaml
       - REACT_APP_BE_VERSION=${BACKEND_BRANCH}
       - REACT_APP_FE_VERSION=${FRONTEND_BRANCH}
     volumes:
@@ -60,7 +60,6 @@ services:
     ports:
       - 7474:7474
       - 7687:7687
-
 volumes:
   neo4j-data:
   neo4j-logs:
